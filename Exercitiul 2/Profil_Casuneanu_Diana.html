@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	<title>Profilul meu</title>
+	<style>
+	body{ background-color: #ffcce6;}
+	h1 {color: #ff0066;}
+	h2 {color: #000000;}
+	p {color: #000000; }
+	
+	table {background-color: #FFEBCD;}
+	ul {background-color: #FFEBCD;}
+	
+	table, tr, td, ul {border:2px solid black;}
+	tr:hover {background-color: #d9b3ff}
+	
+	h1 {font-family: "Verdana";
+	    font-style : italic;
+		font-size  : 50 px;}
+	P {font-family:"Arial";
+	   font-size: 18px;}
+	
+    img{border: 2px solid black;
+        border-radius: 12px;
+        width:400px;
+        display:block;
+        padding:10px;
+        margin:left;
+        opacity: 0.80;}				   
+	</style>
+<script>
+function veziViitor() 
+    {
+      document.getElementById("numeProfil").innerHTML="Inginer militar Casuneanu Diana";
+
+      var tabelEducatie=document.getElementById("tabEducatie");
+tabelEducatie.rows[0].cells[0].innerHTML="Univ Tehnica OSUT/BEST";
+tabelEducatie.rows[0].cells[2].innerHTML="lucrul in echipa";
+tabelEducatie.rows[1].cells[0].innerHTML="Liceul Teoretic xyz";
+tabelEducatie.rows[1].cells[2].innerHTML="vorbitul in public";
+tabelEducatie.rows[2].cells[0].innerHTML="Intership";
+tabelEducatie.rows[2].cells[1].innerHTML="anul IV";
+tabelEducatie.rows[2].cells[2].innerHTML="aplicatie monitorizare trafic";
+
+document.getElementById("pozaProfil").src="poza2.jpg";
+
+document.body.style.backgroundColor="yellow";
+
+var par=document.getElementByTagName("p");
+var i;
+for(i=0;i<par.length;i++){
+par[i].style.color="magenta"; }
+document.getElementById("pozaProfil").style.opacity="0.9";
+document.getElementById("pozaProfil").style.border="6px";}
+
+function Varsta () {
+var azi=new Date;
+var varstMea;
+var anNastere=document.getElementById("varsta").innerHTML;
+varstMea=azi.getFullYear()-parseInt(anNastere);
+
+document.getElementById("varsta").innerHTML=varstMea;
+}
+
+</script>
+	</head>
+	<body>
+	   <div>
+	         <h1 id="numeProfil" > CĂȘUNEANU DIANA </h1>
+			 <p> </b>Nume: </b>Casuneanu</p>
+			 <p> </b>Prenume:</b>Diana</p>
+			 <img id="pozaProfil" src="poza.jpg" width="370" height="500">
+			 <h2>Date de contact</h2>
+			 <p><b>E-mail </b> <a href="">Casuneanu.Da.Diana@utcluj.didatec.ro </a></p>
+			 <p onmouseover = "Varsta()" id="varsta">2001</p>
+			 <h2>Hobby-uri</h2>
+			   <ul>
+			     <li>Sportul</li>
+				 <li>Plimbarile</li>
+				 <li>Muzica</li>
+			   </ul>
+			 <button onclick="veziViitor()">Alta viata</button> 
+			 <h2>Materii pentru aprofundare</h2>
+			 <table>
+			 <table id="tabEducatie">
+			   <tr>
+			       <th>Disciplina</th>
+				   <th>Anul de studiu</th>
+				   <th>Link</th>
+			   </tr>
+               <tr>
+                   <td>	Informatica aplicata </td>
+                   <td>Anul 1</td>
+                   <td> <a href="https://etti.utcluj.ro/files/planuri-invatamant/curent/EA_ro.pdf">link fisa</a></td>				   
+			   </tr>
+			   <tr>
+			       <td> Componente si circuite pasive </td>
+				   <td>Anul 1</td>
+                   <td> <a href="https://etti.utcluj.ro/files/planuri-invatamant/curent/EA_ro.pdf">link fisa</a></td>	
+			   </tr>
+			   <tr>
+                   <td> Grafica asistata pe calculator </td>
+				   <td>Anul 2</td>
+                   <td> <a href="https://etti.utcluj.ro/files/planuri-invatamant/curent/EA_ro.pdf">link fisa</a></td>	
+               </tr>
+               </table>
+		</div>
+</body>		
